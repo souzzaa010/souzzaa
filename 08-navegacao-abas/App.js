@@ -15,7 +15,8 @@ export default function App() {
 
         <Tab.Navigator>
           
-          <Tab.Screen name='HomeScreen' 
+          <Tab.Screen 
+          name='HomeScreen' 
           component={HomeScreen} 
           options={{
             title: 'Tela de Início',
@@ -24,12 +25,36 @@ export default function App() {
             headerStyle:{
               backgroundColor: 'red'
             },
-            tabBarIcon: ({color, size}) => <Ionicons name="home" color={color} size={size} />
+          tabBarIcon: ({color, size}) => <Ionicons name="home" color={color} size={size} />
           }}
           />
 
-          <Tab.Screen name='ProfileScreen' component={ProfileScreen}/>
-          <Tab.Screen name='SettingsScreens' component={SettingsScreens}/>
+          <Tab.Screen 
+          name='ProfileScreen' 
+          component={ProfileScreen}
+          options={{
+            title: 'aplicativos',
+            headerTitleAlign: 'center',
+            headerTitleColor: 'white',
+            headerStyle:{
+              backgroundColor: 'blue'
+            },
+            tabBarIcon: ({color, size}) => <Ionicons name="apps" color={color} size={size} />
+          }}/>
+
+          <Tab.Screen 
+          name='SettingsScreens' 
+          component={SettingsScreens}
+          options={{
+            title: 'Aplicativos',
+            headerTitleAlign: 'center',
+            headerTitleColor: 'white',
+            headerStyle:{
+              backgroundColor: 'blue'
+            },
+            tabBarIcon: ({color, size}) => <Ionicons name="ban" color={color} size={size} />
+          }}
+          />
 
         </Tab.Navigator>
 
