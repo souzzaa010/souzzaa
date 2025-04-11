@@ -1,12 +1,14 @@
 import { PaperProvider } from "react-native-paper";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import HomeScreen from "./screens/HomeScreen";
-import ProfileScreen from "./screens/ProfileScreen";
-import SettingsScreens from "./screens/SettingsScreens";
+import EscudoScreen from './screens/EscudoScreen';
+import JogadoresScreen from './screens/JogadoresScreen';
+import TituloScreen from './screens/TituloScreen';
 import { Ionicons } from '@expo/vector-icons'
 
+
 const Tab = createBottomTabNavigator()
+
 
 export default function App() {
   return (
@@ -16,43 +18,43 @@ export default function App() {
         <Tab.Navigator>
           
           <Tab.Screen 
-          name='E' 
-          component={HomeScreen} 
+          name='Escudo' 
+          component={EscudoScreen} 
           options={{
-            title: 'Tela de Início',
+            title: 'Escudo',
             headerTitleAlign: 'center',
             headerTitleColor: 'white',
             headerStyle:{
-              backgroundColor: 'red'
+              backgroundColor: '#a10a08'
             },
-          tabBarIcon: ({color, size}) => <Ionicons name="home" color={color} size={size} />
+          tabBarIcon: ({color, size}) => <Ionicons name="shield" color={color} size={size} />
           }}
           />
 
           <Tab.Screen 
           name='ProfileScreen' 
-          component={ProfileScreen}
+          component={JogadoresScreen}
           options={{
-            title: 'aplicativos',
+            title: 'Jogadores',
             headerTitleAlign: 'center',
             headerTitleColor: 'white',
             headerStyle:{
-              backgroundColor: 'blue'
+              backgroundColor: 'white'
             },
-            tabBarIcon: ({color, size}) => <Ionicons name="apps" color={color} size={size} />
+            tabBarIcon: ({color, size}) => <Ionicons name="person" color={color} size={size} />
           }}/>
 
           <Tab.Screen 
-          name='SettingsScreens' 
-          component={SettingsScreens}
+          name='Titulo' 
+          component={TituloScreen}
           options={{
-            title: 'Camisetas',
+            title: 'Titulo Importantes',
             headerTitleAlign: 'center',
             headerTitleColor: 'white',
             headerStyle:{
-              backgroundColor: 'blue'
+              backgroundColor: 'gold'
             },
-            tabBarIcon: ({color, size}) => <Ionicons name="ban" color={color} size={size} />
+            tabBarIcon: ({color, size}) => <Ionicons name="trophy" color={color} size={size} />
           }}
           />
 
@@ -62,5 +64,3 @@ export default function App() {
     </PaperProvider>
   );
 }
-
-
