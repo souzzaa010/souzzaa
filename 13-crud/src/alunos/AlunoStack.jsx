@@ -8,12 +8,12 @@ const Stack = createStackNavigator()
 export default function AlunoStack() {
     return (
         <Stack.Navigator>
-    
+
+          <Stack.Screen name='Aluno Lista' component={AlunoLista} />
           <Stack.Screen 
             name='Aluno Form'
             component={AlunoForm} />
-          <Stack.Screen name='Aluno Lista' component={AlunoLista} />
-    
+          
         </Stack.Navigator>
       )
 }
