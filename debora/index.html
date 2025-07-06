@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Você é meu lugar no mundo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --rosa-claro: #000000;
+      --rosa-principal: #868686;
+      --dourado: #ffd700;
+      --branco: #ffffff;
+      --preto: #333;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: var(--rosa-claro);
+      color: var(--preto);
+      line-height: 1.6;
+      background-image: url('https://i.imgur.com/o0Q0QmK.png');
+      background-repeat: repeat;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: var(--rosa-principal);
+      color: var(--branco);
+      animation: fadeInDown 1s ease;
+      position: relative;
+    }
+
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+    }
+
+    .girassol-icon {
+      width: 40px;
+      vertical-align: middle;
+      margin: 0 5px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      animation: fadeIn 2s ease;
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .tempo {
+      font-weight: bold;
+      margin: 20px 0;
+      color: var(--rosa-principal);
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin: 30px 0;
+    }
+
+    .galeria img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    .musica {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: var(--rosa-principal);
+      color: var(--branco);
+      font-style: italic;
+      position: relative;
+    }
+
+    footer img {
+      width: 30px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><img src="girassol.png" class="girassol-icon" alt="girassol">Você é meu lugar no mundo.<img src="girassol.png" class="girassol-icon" alt="girassol"></h1>
+  </header>
+
+  <div class="container">
+    <p>Nos conhecemos de uma forma bem louca ne, bem por acaso, la no Vinte3. Quem diria que aquele pedido de Instagram mudaria tudo? Desde então, nossas conversas viraram conexão, e essa conexão virou amor.</p>
+<br>
+    <p>Estamos juntos há <span class="tempo" id="contador"></span>, desde 01/12/2024, e cada um desses dias foi um presente. Foram tantos ensinamentos, tantos problemas que a gente passou juntos e separados, mas no fim tudo sempre retornavá a nós né? Loucura dms isso kkkkkkkk</p>
+<br>
+    <p>Eu admiro tanto você... a sua maturidade, a sua força, a forma como você encara o mundo com coragem, sem nunca desistir. Você me inspira. Com você, eu aprendi a enxergar a vida de outro jeito. Minhas metas mudaram, minha visão de futuro mudou, e tudo que quero agora é crescer, evoluir, e construir a melhor vida possível pra nós dois.</p>
+<br>
+	<p>Eu te amo para toda a eternidade vida, obg por fazer do meu mundo um lugar melhor!</p>
+
+    <div class="galeria">
+      <img src="./foto1.jpeg" alt="foto1">
+      <img src="./foto2.jpeg" alt="foto2">
+      <img src="./foto3.jpeg" alt="foto3">
+    </div>
+
+    <div class="musica">
+      <p><strong>Nossa música:</strong> Água com Açúcar - Luan Santana</p>
+      <audio controls>
+        <source src="./Luan Santana - água com açúcar (DVD VIVA) [Vídeo Oficial].mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
+
+  <footer>
+    Obrigado por existir. Você é minha paz em meio ao mundo. ❤️
+    <img src="girassol.png" alt="girassol">
+  </footer>
+
+  <script>
+    function atualizarContador() {
+      const inicio = new Date("2024-12-01");
+      const hoje = new Date();
+      const diff = hoje - inicio;
+      const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+      document.getElementById("contador").textContent = `${dias} dias`;
+    }
+    atualizarContador();
+  </script>
+</body>
+</html>
